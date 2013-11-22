@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>-- [Jurpey S.L.] --</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Construcciones Metálicas">
+    <meta name="author" content="Jurpey S.L.">
+
+    <!-- Hojas de estilo necesarias. Las de bootstrap-->
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+
+    /* ESTILOS DEL PROYECTO
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      color: #5a5a5a;
+      background-color: rgb(250, 250, 250);
+    }
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+    .azul{
+        background-color: rgb(52, 152, 219);
+        
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .azul p{
+        color:#fff;
+    }
+    .azul strong{
+        color:#000;
+    }
+    .rojo{
+        background-color: rgb(231, 76, 60);
+        color:rgb(250, 250, 250);
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .rojo .muted{
+        color:#000;
+    }
+    .rojo a{
+        color:#000;
+    }
+    .logo{
+        margin-top:50px;
+    }
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+     
+        border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+    .minavbar {
+        margin-bottom: 20px;
+        margin-right: 15px;
+    }
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      padding-left:5px;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .lead2 {
+      margin: 0;
+      padding-left:15px;
+      line-height: 1.25;
+      color: #000;
+      background-color:#ccc;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+    @media (max-width: 480px) {
+        
+      .carousel-caption {
+        display: none;
+      }
+      
+    }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="./assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="./assets/ico/favicon.png">
+                                   
+  </head>
+
+  <body>
+
+
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#imagenes">Galería de Imágenes</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li class="active"><a href="#empresa">La empresa</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contacta!!<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="mailto:info@jurpey.com"><i class="icon-envelope"></i> - Por mail ... -</a></li>
+                    <li><a href="#contacto"><i class="icon-edit"></i> - Formulario  -</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#contacto"><i class="icon-road"></i> ... o visítanos!!</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="./assets/img/examples/slide-01.jpg" alt="">
+          <div class="container hidden-phone">
+            <div class="carousel-caption offset2">
+              <h1> Calidad en el trabajo!</h1>
+              <br>
+              <p class="lead2">Fundamentada en el cumplimiento de unos principios</p><br>
+              <p class="lead2"> básicos de organización y funcionamiento.</p>
+              <a class="btn btn-block btn-warning" href="#imagenes">Veamos algunos ejemplos ... </a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="./assets/img/examples/slide-02.jpg" alt="">
+          <div class="container hidden-phone">
+            <div class="carousel-caption">
+              <h1>Satisfacción final.</h1>
+              <p class="lead2">Nuestra y de nuestros clientes. Esa es la filosofía que guía nuestro trabajo.</p>
+              <a class="btn btn-block btn-primary" href="#contacto">¿Dudas? ... Atenderemos las que tenga.</a>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="./assets/img/examples/slide-03.jpg" alt="">
+          <div class="container hidden-phone">
+            <div class="carousel-caption offset4">
+              <h1>Valores esenciales:</h1>
+              <p class="lead2">Cumplimiento de plazos, precio y seguridad por encima de todo.</p><br>
+              <p class="lead2">Siempre en mente: la utilización racional de nuestros recursos.</p>
+              <a class="btn btn-block btn-success" href="#empresa">Conózcanos mejor ... </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div><!-- /.carousel -->
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <div class="container marketing" id="servicios">
+          <!-- Three columns of text below -->
+          <div class="row">
+            <div class="span4">
+              <img class="img-circle" src="./assets/img/examples/proyectos.jpg">
+              <h2>Proyectos</h2>
+              <p><strong>Naves</strong>; de almacenamiento y logísticas. <strong>Oficinas, casetas, instalaciones</strong> de recreo al aire libre, cubiertas y fachadas metalicas.</p>
+              <p><a class="btn" href="#imagenes">Imágenes &raquo</a></p>
+            </div><!-- /.span4 -->
+            <div class="span4">
+              <img class="img-polaroid" src="./assets/img/examples/cerrajeria2.jpg">
+              <h2>Cerrajería</h2>
+              <p><strong>Grandes obras</strong>, cargaderos metálicos, dinteles, estructuras, vallados, barandas, escaleras, puertas, marquesinas y soportes publicitarios.</p>
+              <p><a class="btn" href="#imagenes">Imágenes &raquo;</a></p>
+            </div><!-- /.span4 -->
+            <div class="span4">
+              <img class="img-polaroid" src="./assets/img/examples/otros.jpg">
+              <h2>Otros servicios</h2>
+              <p><strong>Automatizacion</strong> de accesos, aparcamientos, <strong>vigas anti-empotramiento</strong>, falsos techos y cerramientos. Útiles agrícolas y carrocerías.</p>
+              <p><a class="btn" href="#imagenes">Imágenes &raquo;</a></p>
+            </div><!-- /.span4 -->
+          </div><!-- /.row -->
+    
+    </div>
+      <!-- EMPEZAMOS A DESCRIBIR LA EMPRESA -->
+      
+      <div class="row">
+        <div class="span6 offset5">
+            <img class="logo" src="./assets/img/examples/logo.jpg">
+        </div>
+      </div>
+      <div class="container-fluid azul" id="empresa">
+
+<!-- two columns of text below -->
+
+          <div class="row-fluid">
+            <div class="span6">
+              <h2 class="featurette-heading text-left" style="color:#fff;">Encantados <span class="muted" style="color:#000;">de conocerle!</span></h2><br>     
+              <div class="row">
+
+                      <img class="img-polaroid offset1" src="./assets/img/examples/cortadora.jpg">
+                 
+              </div>
+              <br>
+              <p class="text-right"><strong>Hace más de una década</strong>, fruto de la experiencia acumulada durante años de trabajo en diversos sectores y ante la realidad social del momento, <strong>nace Jurpey</strong>, empresa dedicada a la construcción y diseño de todo tipo de estructuras metálicas.</p>
+              <p class="text-right">El desarrollo de <strong>soluciones de calidad previamente contrastada</strong> ha hecho a la empresa mantener su actividad en un sector cada vez más competitivo.</p>
+            </div><!-- /.span6 -->
+            <div class="span6">
+                <h2 class="featurette-heading text-left" style="color:#fff;">Nuestros <span class="muted" style="color:#000;">clientes:</span></h2><br>
+                <p class="text-left"><strong>Trabajamos principalmente</strong> junto a empresas dedicadas a la construcción y reforma de elementos estructurales. Desarrollamos nuestros proyectos en areas urbanas, industriales, agrícolas, residenciales y de recreo.</p>
+              <p class="text-right"><strong>Desarrollamos nuestra actividad</strong> en estrecha colaboración con los promotores; la autopromoción inmobiliaria es uno de nuestros ámbitos de actuación habituales.</p>
+              <img class="img-polaroid pull-left" src="./assets/img/examples/cascos.jpg">
+            </div><!-- /.span6 -->
+          </div><!-- /.row -->
+        </div>
+<!-- Acceso a la galería de imágenes-->
+        <!-- Empezamos con los thumbnails-->
+   <div class="container">
+        <section id="imagenes">          
+          <h2 class="featurette-heading text-left">Algunas imágenes</h2>
+          <h5 class="text-right text-info"><i class="icon-fullscreen"></i> Haz click en las imágenes para revisar nuestras galerías en Flickr! </h5><br>
+          <div class="row">
+            <ul class="thumbnails">
+              <li class="span4">
+                <a href="#" class="thumbnail">
+                  <img src="./assets/img/thumbnails/360x270.jpg" alt="">
+                </a>
+              </li>
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img src="./assets/img/thumbnails/260x120_1.jpg" alt="">
+                </a>
+              </li>
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img src="./assets/img/thumbnails/260x120_2.jpg" alt="">
+                </a>
+              </li>
+              <li class="span2">
+                <a href="#" class="thumbnail">
+                  <img src="./assets/img/thumbnails/160x120_1.jpg" alt="">
+                </a>
+              </li>
+              <li class="span2 offset3">
+                <a href="#" class="thumbnail">
+                  <img src="./assets/img/thumbnails/160x120_2.jpg" alt="">
+                </a>
+              </li>
+              <li class="span3">
+                <a href="#" class="thumbnail">
+                  <img src="./assets/img/thumbnails/260x120_3.jpg" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+ <!-- segunda fila de thumbnails -->
+          <div class="row-fluid">
+            <ul class="thumbnails">
+              <li class="span2">
+                <a href="#" class="thumbnail">
+                  <img src="./assets/img/thumbnails/160x120_3.jpg" alt="">
+                </a>
+              </li>
+              <li class="span2">
+                <a href="#" class="thumbnail">
+                  <img src="./assets/img/thumbnails/160x120_4.jpg" alt="">
+                </a>
+              </li>
+              <li class="span2">
+                <a href="#" class="thumbnail">
+                  <img src="./assets/img/thumbnails/160x120_5.jpg" alt="">
+                </a>
+              </li>
+              <li class="span2">
+                <a href="#" class="thumbnail">
+                  <img src="./assets/img/thumbnails/160x120_6.jpg" alt="">
+                </a>
+              </li>
+              <li class="span2">
+                <a href="#" class="thumbnail">
+                  <img src="./assets/img/thumbnails/160x120_7.jpg" alt="">
+                </a>
+              </li>
+              <li class="span2">
+                <a href="#" class="thumbnail">
+                  <img src="./assets/img/thumbnails/160x120_8.jpg" alt="">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+   </div>
+ <!-- terminamos los thumbnails -->
+ <div class="container-fluid marketing rojo" id="contacto">
+     <div class="container">
+          <h1 class="featurette-heading text-center">Contacte con <span class="muted">nosotros!</span></h1>
+             <!-- two columns of text below -->
+          <div class="row">
+              <div class="span5 offset2">
+            <form method="POST" action="./assets/php/contact-form-submission.php">
+                <fieldset>
+                    <label>Nombre</label>
+                    <input type="text" class="span4" name="contact_name" id="input1" placeholder="escriba su nombre..."  required>
+                    <label>Tlf</label>
+                    <input type="text" class="span4" name="contact_phone" id="input2" placeholder="fijo o móvil..."  >
+                    <label>EMail</label>
+                    <input type="text" class="span4"  name="contact_email" id="input3" placeholder="mail..."  required>
+                    <label>Mensaje</label>
+                    <textarea class="span4" rows="5" name="contact_message" id="input4" placeholder="¿En qué podemos ayudarle?..."></textarea>
+                </fieldset>
+                <input type="hidden" name="save" value="contact">
+                <button type="submit" class="btn pull-left">Enviar</button>           
+            </form>
+            </div><!-- /.span5 -->
+            <div class="span5">
+                <p class="lead">Puede encontrarnos aquí.</p>
+                <address>
+                    <strong>Jurpey S.L.</strong><br>
+                    Villarrubia de los Ojos<br>
+                    Polígono Industrial Santa Ana<br>
+                    C/ Trevor J.Dadson.<br>
+                    <strong>Tlf</strong>: 926899006<br>
+                    <strong>Fax</strong>: 926096000<br>
+                    <strong>Mail general</strong>: <a href="mailto:#">info@jurpey.com</a> <br>
+                </address>
+                <img class="img-polaroid" src="./assets/img/examples/contacto.jpg">
+            </div><!-- /.span4 -->
+          </div><!-- /.row -->
+      </div> <!-- /.container -->
+    </div><!-- /.container fluid -->
+    <hr class="featurette-divider">
+
+    <!-- /FIN DEl form -->
+      
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row-fluid">
+                <p>&copy; 2013 Jurpey S.L. &middot; <a href="mailto:info@jurpey.com">Contacto</a></p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster 
+    He incluído todo bootstrap para no tener problemas al probar scripts -->
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="./assets/js/holder/holder.js"></script>
+    <div title="Subir arriba" id="topcontrol" style="right: 20px; bottom: 10px; position: fixed; cursor: pointer; opacity: 1;">
+        <a href="#"><img style="width: 51px; height: 42px;" src="assets/img/up.png"></a>
+    </div>
+  </body>
+</html>
